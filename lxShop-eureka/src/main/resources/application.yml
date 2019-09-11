@@ -1,0 +1,30 @@
+server:
+  port: 9701
+
+spring:
+  security:
+    user:
+      name: lxShop
+      password: lxShop
+  application:
+    name: lxShop-eureka
+  cloud:
+    config:
+      enabled: false
+
+# docker-compose部署时候 hostname 换成itl-eureka
+# 类似的 redis 使用itl-redis ,gateway 换成 itl-gateway
+eureka:
+  instance:
+    hostname: lxShop-eureka
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    eviction-interval-timer-in-ms: 4000
+    enable-self-preservation: false #关闭保护机制
+    renewal-percent-threshold: 0.9
+

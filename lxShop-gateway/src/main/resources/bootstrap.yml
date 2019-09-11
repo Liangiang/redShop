@@ -1,0 +1,30 @@
+server:
+  port: 9703
+
+spring:
+  security:
+    user:
+      name: lxShop
+      password: lxShop
+  application:
+    name: lxShop-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #是否开启
+      routes:
+      #-----------基础服务--------
+      #123
+      - id: lxShop-service
+        uri: lb://lxShop-service
+        predicates:
+        - Path=/reshop/**
+
+# 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:9701/eureka/
