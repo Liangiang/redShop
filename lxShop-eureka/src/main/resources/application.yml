@@ -16,7 +16,7 @@ spring:
 # 类似的 redis 使用itl-redis ,gateway 换成 itl-gateway
 eureka:
   instance:
-    hostname: lxShop-eureka
+    hostname: localhost
     prefer-ip-address: true
   client:
     register-with-eureka: false

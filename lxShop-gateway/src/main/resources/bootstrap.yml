@@ -20,6 +20,10 @@ spring:
         uri: lb://lxShop-service
         predicates:
         - Path=/reshop/**
+      - id: lxShop-admin
+        uri: lb://lxShop-admin
+        predicates:
+        - Path=/admin/**
 
 # 注册中心
 eureka:
