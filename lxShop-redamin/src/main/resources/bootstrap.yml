@@ -1,41 +1,31 @@
 server:
-  port: 9705
+  port: 9709
 
 spring:
   application:
-    name: lxShop-service
+    name: lxShop-redamin
   profiles:
     active: dev
   #配置中心
   cloud:
     config:
-      fail-fast: true
-      name: ${spring.application.name}
-      profile: ${spring.profiles.active}
-      discovery:
-        enabled: true
+      enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/lxshop?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
-
   main:
     allow-bean-definition-overriding: true
 # 注册中心配置
 eureka:
-  instance:
-    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://lxShop:lxShop@localhost:9701/eureka/
+  instance:
+    prefer-ip-address: true
 
 logging:
   level:
     root: info
-
-mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  ##typeEnumsPackage: com.itl.cloud.hip.entity.constants

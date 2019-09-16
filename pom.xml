@@ -57,9 +57,9 @@
         <!--<module>lxShop-config</module>-->
         <module>lxShop-gateway</module>
         <!--<module>lxShop-auth</module>-->
-        <!--<module>lxShop-upms</module>-->
+        <module>lxShop-redamin</module>
         <!--<module>lxShop-admin</module>-->
-        <!--<module>lxShop-visual</module>-->
+        <module>lxShop-demo</module>
         <module>lxShop-service</module>
     </modules>
 

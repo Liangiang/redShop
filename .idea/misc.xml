@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/lxShop-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/lxShop-service/pom.xml" />
         <option value="$PROJECT_DIR$/lxShop-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/lxShop-redamin/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -6,13 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
         <module name="lxShop-eureka" />
         <module name="lxShop-gateway" />
+        <module name="lxShop-redamin" />
         <module name="lxShop-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="lxShop-aadmin" target="1.8" />
+      <module name="lxShop-admin" target="1.8" />
       <module name="lxShop-config" target="1.8" />
     </bytecodeTargetLevel>
   </component>
